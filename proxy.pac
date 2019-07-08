@@ -17,6 +17,7 @@ var FindProxyForURL = function(init, profiles) {
         if (/(?:^|\.)google\.com$/.test(host)) return "+local-socks5";
         if (/(?:^|\.)acgvideo\.com$/.test(host)) return "DIRECT";
         if (/(?:^|\.)steampowered\.com$/.test(host)) return "+local-socks5";
+        if (/(?:^|\.)steamcommunity\.com$/.test(host)) return "+local-socks5";
         return "+__ruleListOf_auto switch";
     },
     "+__ruleListOf_auto switch": function(url, host, scheme) {
